@@ -36,6 +36,10 @@ env:
   TARGET_ORG: ${{ github.repository_owner }}
   TARGET_REPO: actions-runner-controller-releases
 
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
 jobs:
   build-runners:
     name: Build ${{ matrix.name }}-${{ matrix.os-name }}-${{ matrix.os-version }}
