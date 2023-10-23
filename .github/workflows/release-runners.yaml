@@ -110,7 +110,8 @@ jobs:
         with:
           context: ./arc/runner
           file: ./arc/runner/${{ matrix.name }}.${{matrix.os-name}}-${{ matrix.os-version }}.dockerfile
-          platforms: linux/amd64
+          #platforms: linux/amd64
+          platforms: x64
           pull: true
           push: ${{ inputs.push_to_registries }}
           build-args: |
