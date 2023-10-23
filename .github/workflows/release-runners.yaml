@@ -118,10 +118,6 @@ jobs:
             DOCKER_VERSION=${{ inputs.docker_version }}
             RUNNER_CONTAINER_HOOKS_VERSION=${{ inputs.runner_container_hooks_version }}
           tags: |
-            #${{ env.DOCKERHUB_USERNAME }}/${{ matrix.name }}:${{ matrix.os-name }}-${{ matrix.os-version }}
-            #${{ env.DOCKERHUB_USERNAME }}/${{ matrix.name }}:v${{ inputs.runner_version }}-${{ matrix.os-name }}-${{ matrix.os-version }}
-            #${{ env.DOCKERHUB_USERNAME }}/${{ matrix.name }}:v${{ inputs.runner_version }}-${{ matrix.os-name }}-${{ matrix.os-version }}-${{ env.SHA_SHORT }}
-            #${{ matrix.latest == 'true' && env.LATEST_TAG_DOCKER || '' }}
             ghcr.io/${{ env.TARGET_ORG }}/${{ env.TARGET_REPO }}/${{ matrix.name }}:${{ matrix.os-name }}-${{ matrix.os-version }}
             ghcr.io/${{ env.TARGET_ORG }}/${{ env.TARGET_REPO }}/${{ matrix.name }}:v${{ inputs.runner_version }}-${{ matrix.os-name }}-${{ matrix.os-version }}
             ghcr.io/${{ env.TARGET_ORG }}/${{ env.TARGET_REPO }}/${{ matrix.name }}:v${{ inputs.runner_version }}-${{ matrix.os-name }}-${{ matrix.os-version }}-${{ env.SHA_SHORT }}
