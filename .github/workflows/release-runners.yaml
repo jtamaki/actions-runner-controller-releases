@@ -6,7 +6,7 @@ on:
       runner_version:
         description: 'Runner Version'
         required: true
-        default: '2.300.2'
+        default: '2.310.2'
       docker_version:
         description: 'Docker Version'
         required: false
@@ -14,7 +14,7 @@ on:
       runner_container_hooks_version:
         description: 'Runner Container Hooks Version'
         required: true
-        default: '0.2.0'
+        default: '0.4.0'
       sha:
         # If the sha is not provided, we'll default to the commit HEAD is pointing to
         description: 'Commit Used To Build The Images'
