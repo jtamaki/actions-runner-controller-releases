@@ -80,13 +80,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-#      - name: Setup Docker Environment
-#        uses: ./.github/actions/setup-docker-environment
-#        with:
+      - name: Setup Docker Environment
+        uses: ./.github/actions/setup-docker-environment
+        with:
 #          username: ${{ env.DOCKERHUB_USERNAME }}
 #          password: ${{ secrets.DOCKER_ACCESS_TOKEN }}
-#          ghcr_username: ${{ github.actor }}
-#          ghcr_password: ${{ secrets.GITHUB_TOKEN }}
+          ghcr_username: ${{ github.actor }}
+          ghcr_password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Checkout
         uses: actions/checkout@v3
